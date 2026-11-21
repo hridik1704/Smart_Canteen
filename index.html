@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Canteen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section id="login-section">
+    <h2>Student Login</h2>
+
+    <input type="text" id="studentName"
+        placeholder="Enter your name">
+
+    <input type="text" id="studentUSN"
+        placeholder="Enter your USN">
+
+    <input type="text" id="studentDept"
+        placeholder="Enter your department">
+
+    <button onclick="studentLogin()">Login</button>
+</section>
+
+
+    <header>
+        <h1>Smart Canteen</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#menu">Food Menu</a>
+            <a href="#cart">My Cart</a>
+        </nav>
+    </header>
+
+    <section id="home" class="welcome">
+        <h2>Welcome to Smart Canteen!</h2>
+        <p>Order your food from the classroom and collect it when ready.</p>
+
+<p id="studentWelcome">
+    Please login to start ordering.
+</p>
+
+    </section>
+
+    <section id="menu">
+        <h2>Today's Menu</h2>
+
+        <div class="food-container">
+
+            <div class="food-card">
+                <h3>Veg Sandwich</h3>
+                <p>₹40</p>
+                <button onclick="addToCart('Veg Sandwich', 40)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="food-card">
+                <h3>Masala Dosa</h3>
+                <p>₹50</p>
+                <button onclick="addToCart('Masala Dosa', 50)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="food-card">
+                <h3>Veg Fried Rice</h3>
+                <p>₹70</p>
+                <button onclick="addToCart('Veg Fried Rice', 70)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="food-card">
+                <h3>Tea</h3>
+                <p>₹15</p>
+                <button onclick="addToCart('Tea', 15)">
+                    Add to Cart
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="cart">
+        
+<section id="cart">
+    <h2>My Cart</h2>
+
+    <div id="cart-items">
+        Your cart is empty.
+    </div>
+
+    <h3 id="total">Total: ₹0</h3>
+
+    <h3>Select Payment Method</h3>
+
+    <label>
+        <input type="radio" name="payment"
+            value="Online Payment">
+        Online Payment (UPI)
+    </label>
+
+    <br><br>
+
+    <label>
+        <input type="radio" name="payment"
+            value="Pay at Counter">
+        Offline Payment (Pay at Counter)
+    </label>
+
+    <br><br>
+
+    <button onclick="placeOrder()">
+        Confirm Order
+    </button>
+</section>
+
+<section id="order-confirmation" style="display:none;">
+    <h2>Order Placed Successfully!</h2>
+    <h3>Your Token Number:</h3>
+    <h1 id="token-number"></h1>
+    <p id="payment-status"></p>
+
+<section id="tracking-section">
+    <h2>Track Your Order</h2>
+
+    <input
+        type="text"
+        id="trackToken"
+        placeholder="Enter your order token"
+    >
+
+    <button onclick="trackOrder()">
+        Track Order
+    </button>
+
+    <div id="tracking-result"></div>
+</section>
+
+</section>
+
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
